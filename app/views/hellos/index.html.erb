@@ -1,0 +1,16 @@
+<h1>Hellos</h1>
+
+<div ng-controller="HellosCtrl">
+  Name:
+  <input type="text" ng-model="name">
+
+  <ul>
+    <li ng-repeat="hello in hellos">
+    {{ hello.language }}: {{ hello.greeting }} {{ name }}
+    </li>
+  </ul>
+
+  <input type="text" placeholder="Language" ng-model="newHello.language">
+  <input type="text" placeholder="Greeting" ng-model="newHello.greeting">
+  <button ng-click="addHello()">Add</button>
+</div>
